@@ -1,0 +1,97 @@
+Bryce sat by himself in the common room. The large windows opened up on to the
+growing construction site. Several weeks ago the builder units finished
+building the energy and water collectors. As soon as they finished, Vita and
+her team jumped into high gear. The new homes, streets, and community
+buildings were coming up at an incredible rate. While that should have made
+Bryce happy, it was having the opposite effect. A ball of anxiety was building
+in the pit of his stomach. "What am I going to do?" he said to himself. "I
+can't just sit here stressed. I need a distraction." He swiped his phone on
+and typed out a quick message to you. "Up for a game of squash? Meet me at the
+gym in 10?".
+
+You replied to the message, agreeing to play. The gym was completed last week
+and since then had seen constant use. Finally, a place for everyone to stretch
+their legs. One of the central attractions in the gym was the squash
+court. Originally, the construction team built a racquetball court but they
+quickly realized that with the reduced Martian gravity, the bounce-to-gravity
+ratio for racquetballs just made the game way too difficult. Players could
+play a whole game without the ball ever touching the ground. At that point
+someone suggested switching to squash. The game is basically the same but a
+squash ball is so much less bouncy that it makes up for the gravity
+differences.
+
+Bryce arrived just as you finished warming up. "Hey!" he said. "Hope you're up
+for a good game." He jumped into the court and almost before you were ready he
+served the ball -- a strong and precise shot right down your backhand
+wall. After a few points of play it became clear that something was bothering
+Bryce. He was hitting the ball so hard and playing so aggresively. You stopped
+to catch your breath after a particularly vigorous volley. "Wow, man. You've
+got a bee in your bonnet today, don't you?". At that moment Director Goliss
+walked into the viewing area.
+
+She pointed angrily at Bryce and signaled him to come to her. "Oh great!" he
+said. "We'll see how this goes." He opened the glass door to the court
+enclosure and went to the Director. It only took a few moments of conversation
+before Bryce started yelling. "What am I supposed to do! You guys dumped all
+this work on me. Twenty-five thousand! Do you have any idea how long this is
+going to take?"
+
+"I don't care!" the Director shouted back. "In less than 10 weeks we're going
+to have those twenty-five thousand people floating around in space if we're
+not ready." She poked a finger at his chest. "Get your job done!"
+
+Bryce turned bright red then flung his squash racquet over the low court wall
+and over your head. The racquet ricocheted off the wall. You ducked out of the
+way to avoid getting hit. "Fine" Bryce shouted into her face. "I'll get my job
+done." Then he stormed off through the gym doors.
+
+The Director looked at you, noticing you for the first time, and then turned
+to leave. She paused, though, and returned back to you. Opening the court
+door, she approached you. "Sorry you had to witness that. I try to keep things
+calm here." She did look apologetic but also non-compromising.
+
+"What's the problem?" you asked.
+
+"Well, the housing arrangements aren't done. It wasn't possible to make all of
+the living assignments until we had a better idea of what buildings we could
+actually build. Now that we know, we have just a short amount of time to make
+the assignments. For some reason Bryce has been dragging his feet. He claims
+that he doesn't have any tools. Van Halen gave him a single text file with all
+of the personnel listed in it. I guess Bryce can't work with that format. All
+of his existing HR software takes multiple minutes just to process a single
+person."  She paused for a thoughtful moment. "You have been very successful
+in helping us in other software tasks, maybe you can help Bryce?"
+
+You started to think of all of the work still sitting on your todo list but
+then the look on the Director's face convinced you. "Yeah, in the very least I
+can go and talk to him. Maybe there is something I can do to help."  The
+Director looked relieved. "Thanks!" she said. "Well, now onto the next fire."
+She turned and exited the gym.
+
+About an hour later, after you changed and showered, you found Bryce in the HR
+lab. He looked at you sheepishly when you stepped in. "Hey, sorry about that
+explosion earlier. I just, well, I just can't handle the pressure right now."
+
+"So what's going on?"
+
+"Did the Director tell you the problem?" You nodded. "Well, if I just had a
+software module that could look up people faster, the rest of my software
+would work great and I'd make quick work of the assignments. The way things
+are right now, it will take weeks just for my housing assignment software to
+run. That doesn't even give me time to do job assignments, eating and
+recreation schedules, etc. Dude, it's an impossible mess."
+
+You looked at the text file that contained all the data and you realized how
+you could help. "Ok, I can help here. Send me this file and what I'll do is
+make a software module for you that you can hook into your software that let's
+you look people up almost instantly. That should make your job much faster."
+
+Bryce looked like a gigantic weight had been lifted off his
+shoulders. "Really? You think you can do that?"
+
+"Hah. Piece of cake," you said. "Just give me a couple days and I'll have it
+for you."
+
+Bryce offered his fist for a fist bump. "Dude! That's awesome!"
+
+

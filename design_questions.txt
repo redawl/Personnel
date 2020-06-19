@@ -1,0 +1,75 @@
+=== Design and Implementation Plan Questions ===
+
+Below are a few questions about how you will design your program and your
+implementation plan. It is crucial to have a reasonable design and
+implementation plan before you start your program. Without this, success is
+unlikely. The following questions will help guide you in your thinking and
+raise some important questions and issues. There is no single "right" answer
+to each of the questions but there are some "wrong" answers. Some designs and
+plans are better than others. The point here is for you to think about what
+you're going to do.
+
+Make a copy of this file and edit it, adding your answers then turn this
+document in.
+
+----------------------------------------------------------------------
+
+1) The instructions.txt document lists a minimum set of classes that you need
+to have in your program: person, personmgr, hashtable. How will each of these
+classes relate to each other. For example, will some of these classes contain
+other classes as data members? Will some of these classes call methods on the
+other classes?
+
+  personmgr -- hashtable: 
+
+  Hashtable doesnt know personmgr exists. It just implements functions to access
+  input the data it is given into a hashtable. Personmgr uses these function to
+  manage the info in the person database.
+
+  personmgr -- person: 
+  
+  Despite their names, personmgr and person will not communicate directly at
+  all, and will use the hashtable class to work together.
+
+  person -- hashtable: 
+  
+  Hashtable stores person objects in the table, but person doesnt have any idea
+  whats happening to it, its only job is to store data relevant to it.
+
+2) What is wrong with the following code and what would be the right way to
+copy char* data?
+
+void copyname(char* src_name,char* dest_name) {
+  dest_name = src_name;
+}
+
+Since dest_name and src name are pointers, this code does not copy the data the
+pointers are pointing to, but instead copies the address. If we want to copy the
+data, we must use strcpy instead to make a deep copy.
+
+3) Your personmgr class should be written in such a way that you could replace
+the hashtable with a linked list (if you had a linked list that held person
+data) very easily. How are you going to design your program so that this
+change could be made quickly?
+
+personmgr will not call the hashtable directly, and will only use generic
+functions such as lookup and add data, and if a new linkedlist class has the
+same names for its functions, it will work flawlessly.
+
+4) Would it be fast for personmgr to print out a list of all of the person
+objects in order by ID? Why or why not?
+
+It would not be fast, since without knowledge of the exact next ID, personmgr
+would have to go through every possible iteration of ID and check each time if
+that Id is in the database, which would be very slow/
+
+5) What is your testing strategy? Has your testing strategy changed since the
+first programming assignment (martian_weather) and if so, how?
+
+During the last assignment I learned how to use gprof, so if there is any time
+issues I will use that. Other than that I think I will be sticking to valgrind
+for memory leaks and read and write errors. 
+
+
+
+

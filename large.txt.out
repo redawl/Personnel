@@ -1,0 +1,48 @@
+======= Loading personnel data =======
+Added 2496 persons to the person manager.
+
+======= Exercising lookups ===========
+Showing the first 10 records.
+
+ID: MC00U1V1N
+First Name: Briley
+Last Name: Hindman
+
+ID: MC00HTXN5
+First Name: Frederick
+Last Name: Spaulding
+
+ID: MC00V9TOG
+First Name: Teagan
+Last Name: Whitney
+
+ID: MC00OFSTL
+First Name: Reagan
+Last Name: Branson
+
+ID: MC00MF26U
+First Name: Vincenzo
+Last Name: Phipps
+
+ID: MC00BNZU1
+First Name: Tanner
+Last Name: Howard
+
+ID: MC006D018
+First Name: Lina
+Last Name: Major
+
+ID: MC00I238F
+First Name: Grady
+Last Name: Escamilla
+
+ID: MC00Q27AW
+First Name: Dustin
+Last Name: Blackman
+
+ID: MC00VGJTO
+First Name: Savannah
+Last Name: Stinson
+
+======= Hashtable stats ===========
+Table uses 2202 out of 9973 entries.

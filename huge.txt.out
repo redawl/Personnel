@@ -1,0 +1,48 @@
+======= Loading personnel data =======
+Added 24853 persons to the person manager.
+
+======= Exercising lookups ===========
+Showing the first 10 records.
+
+ID: MC00N1JL6
+First Name: Helena
+Last Name: Lightfoot
+
+ID: MC006PP47
+First Name: Colten
+Last Name: Mcdonald
+
+ID: MC00ATIOJ
+First Name: Thalia
+Last Name: Foy
+
+ID: MC006038W
+First Name: Dakota
+Last Name: Muhammad
+
+ID: MC00ALKBD
+First Name: Ezekiel
+Last Name: Moya
+
+ID: MC00ZN5H8
+First Name: Haiden
+Last Name: Daniels
+
+ID: MC00TNE5P
+First Name: Karina
+Last Name: Carper
+
+ID: MC00H6JB6
+First Name: Alyson
+Last Name: Malloy
+
+ID: MC00TE2WV
+First Name: Haylie
+Last Name: Chaffin
+
+ID: MC001B11H
+First Name: Lorenzo
+Last Name: Ramos
+
+======= Hashtable stats ===========
+Table uses 9152 out of 9973 entries.

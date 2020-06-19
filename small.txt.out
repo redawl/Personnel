@@ -1,0 +1,48 @@
+======= Loading personnel data =======
+Added 27 persons to the person manager.
+
+======= Exercising lookups ===========
+Showing the first 10 records.
+
+ID: MC00QJ4RN
+First Name: Clinton
+Last Name: Littleton
+
+ID: MC00FW9XT
+First Name: Lizbeth
+Last Name: Emery
+
+ID: MC001VXHW
+First Name: Logan
+Last Name: Emery
+
+ID: MC00236R9
+First Name: Jenna
+Last Name: Sterling
+
+ID: MC00022X2
+First Name: Shawn
+Last Name: Gillum
+
+ID: MC00JI50T
+First Name: Ariel
+Last Name: Pickard
+
+ID: MC001EWEB
+First Name: Kennedi
+Last Name: Cordero
+
+ID: MC000H9J8
+First Name: Martha
+Last Name: Cordero
+
+ID: MC00B18SO
+First Name: Cael
+Last Name: Kellum
+
+ID: MC008Y2YZ
+First Name: Alfred
+Last Name: Sterling
+
+======= Hashtable stats ===========
+Table uses 27 out of 9973 entries.

@@ -1,0 +1,276 @@
+================================================================================
+========================================================= Overview and Objective 
+
+For this assignment you will write a program that reads in the data for
+individual colonists and adds them to a hashtable. The program will then run
+hundreds of searches to ensure that the hashtable response time is fast
+enough. The program is trying to demonstrate a fast and efficient way of
+handling the large list of colonists. You can read background.txt if you want
+more context for why we are doing this.
+
+The objective of this assignment is to learn how to implement and use a
+hashtable. Since this is the objective, you cannot use a premade hashtable
+(e.g. the STL map class). A secondary objective is to become more familiar
+with using char* to represent string data. You cannot use std::string to
+represent the strings.
+
+Your program will be evaluated based on both how it runs as well as how it was
+designed and coded. Pay attention to the "rubric.txt" file to see how it will
+be evaluated.
+
+Along with these instructions, I have provided data files and the EXACT
+expected output that corresponds to those data files. It is important that
+your program output matches EXACTLY. This includes spelling, whitespace, and
+punctuation.
+
+The rest of this document provides more details about the assignment. If you
+have any questions, be sure to post in the discussion group or send me
+email. Do not wait until the last minute to start this assignment.
+
+================================================================================
+======================================================================== Details 
+
+The following sections provides details about the requirements for the
+assignment.
+
+------------------------------------------------------------------ personnel.cpp
+
+The personnel.cpp file contains the main application for your program. This
+code is meant to read in personnel data (from the provided data file), insert
+the data into a database, and then perform several lookups. The purpose it to
+exercises the database to ensure that it will work fast enough.
+
+The code relies on two classes that you must provide. These are the person and
+personmgr classes (see below).
+
+You should use this code (personnel.cpp) unchanged.
+
+------------------------------------------------------------------------- person
+
+The person class encapsulates information about a single person. This includes
+the person's ID, first name, last name, and family ID. Each of these fields is
+a string which should be implemented as a char* data type (do not use
+std::string).
+
+The personnel.cpp file makes a call to a person constructor that contains each
+of those four items of data so you will need to make sure that your person
+class has that constructor. You will also need to handle the copy constructor
+and assignment operator since this class will hold pointer data.
+
+The person class should have a way to print itself out. The most common way to
+do this in C++ is to provider operator<< for the person class but this isn't
+necessary. You could simply provide a print() method.
+
+---------------------------------------------------------------------- personmgr
+
+The "person manager" is an interesting class. It handles managing person
+objects so that the main program (personnel.cpp) doesn't have to. For this
+program, the personmgr keeps a hashtable of all the person objects. The main
+program creates a personmgr object using a default constructor and then it
+calls three methods: addPerson(), lookup(), printHtStats().
+
+The addPerson() method is called from the main program when adding a person
+for the personmgr class to manage. The personmgr class should add this person
+object to it's internal data structure (hashtable). The findPerson() method is
+given an ID and should lookup that ID in the personmgr's internal data
+structure (hashtable). The method should return the person object that it
+finds. The printHtStats() method is a diagnositc method that just prints the
+total number of table rows used. The printHtStats() method violates the
+"walls" concept to some degree since the main program shouldn't know that
+personmgr is handling things as a hashtable. However, I have left this in here
+to demonstrate that sometimes you need to have diagnostic methods in a program
+to see what is going on. In production software you would remove this method.
+
+Frequently students ask me why there is a class like personmgr. Why doesn't
+the main application just use the hashtable directly. The answer is that the
+personmgr class acts as an abstraction for the "business logic" of handling
+persons. In our case personmgr simply stores and retrieves each person in a
+database. However, consider if there was a more significant function
+required. What if we also needed a separate count or list of persons for each
+family (linked by familyID). Or, maybe we need to randomly select some
+individuals for additional screening. Or, we have a "VIP list" and we need to
+check colonists against that list as we add them to the database. These are
+all additional functions that the main application doesn't need to worry
+about. In all cases the main application just passes a person to the personmgr
+and the personmgr would handle the special functions. To be clear, the
+application for this assignment doesn't do an of these extra functions, I'm
+just pointing out why we have this software architecture with a personmgr
+class.
+
+---------------------------------------------------------------------- hashtable
+
+The personmgr class should have a hashtable data member and this hashtable
+object should hold person objects. The hashtable should use the chaining
+technique for dealing with collisions. The hashtable should have methods for
+isEmpty, insert, and lookup. You won't need remove for this assignment
+(although you can add it for extra credit, see below).
+
+The key to hashtable performance is having a good hash function. This
+assignment doesn't proscribe any particular hash function but there are
+performance requirements (see below).
+
+Since the hashtable must use chaining to handle collisions, you might want to
+create a linkedlist class to handle the chaining. It isn't strictly necessary
+to have a fully implemented linkedlist to handle this. Since you only add
+elements to the beginning of the list and you don't have to remove anything,
+manually handling the next pointers in the hashtable class would be fine. Note
+that this is a compromise in the design due to the very constrained nature of
+how the "linkedlist" is being used. For a more general purpose implementation,
+it would be better to use a proper linkedlist class for the chains.
+
+Your hashtable should have a table size of 9973 rows.
+
+--------------------------------------------------------------------- data files
+
+The data files for this project are a little more complex than in the previous
+projects. Each data file has two sections. The first section contains
+personnel records in this form:
+
+MC00LXG9J Temperance Grace FAM00YRJ2K
+
+This is the person ID, first name, last name, and family ID. After the
+personnel records there is a separator like this:
+
+======= ======= ======= =======
+
+The remaining entries in the data file are person IDs. These are used to
+exercise the lookup function.
+
+This data file format is handled properly by the provided personnel.cpp
+file. If you want to make your own data files, you will need to follow this
+format.
+
+---------------------------------------------------------- External Requirements
+
+- The main driver (personnel.cpp) will add person objects to the personmgr and
+  will also do several searches. Your program must have person and personmgr
+  classes that work with personnel.cpp.
+- The personmgr class needs to store each person object in a hashtable.
+- The hashtable must use a dynamically allocated array with a size of 9973
+  rows.
+- The output from your program must match the output files exactly except for
+  the Hashtable Stats section of the output file. That section can contain any
+  information that you find useful.
+- The program will be evaluated on how quickly it can process huge.txt. See
+  the rubric for point values associated with different performance numbers.
+
+================================================================================
+========================================================================= Design
+
+The design of your program is just as important as the functionality of the
+program. The following sections define the design guidelines and some of the
+implementation requirements (in additional to what was described above).
+
+-------------------------------------------------------------- Design Guidelines 
+
+Your program should use good design methodologies so you should have separate
+classes for each of the following:
+
+- person -- This class represents a person. Each person has an ID, first name,
+  last name, and family ID. Each of these values is a char*. You cannot make
+  any assumptions about the max size of these strings. Note: personnel.cpp
+  DOES make an assumption about the size but that is so that the personnel.cpp
+  file isn't overly complicated since you need to be able to understand it. If
+  you are curious, see the note at the end of this file to see how to safely
+  read strings from a file, reguardless of size.
+
+- hashtable -- This is the data storage for person data. It is a hashtable
+  that contains person objects. It supports the ability to lookup a person and
+  an ability to insert a person. (Remove is not needed for this
+  assignment). The hashtable must have a table size of 9973 rows and must use
+  chaining to deal with collisions. Even though the number of rows is set at
+  9973, the hashtable must use a dynamically allocated array for this table.
+
+- personmgr -- This class is the interface to the main program for handling
+  person data. The person manager has a method to add a person to the
+  database. It can also lookup a person. 
+
+---------------------------------------------------------- Internal Requirements
+
+- The program must use the supplied personnel.cpp file, unmodified, as the
+  main driver.
+- The should be no memory leaks or errors.
+- All "string" data should be stored as char* variables. DO NOT USE
+  std::string.
+
+================================================================================
+======================================================== Turnin and Extra Credit
+
+You must use the "turnin" program to turn in your assignment. DO NOT USE D2L
+TO TURN IN YOUR ASSIGNMENT. Assignments turned in using D2L will not be
+counted. For information on using the "turnin" program see
+~mike.noel/classes/all/turnin.txt.
+
+IMPORTANT: If the program fails to compile, crashes, or hangs then the program
+automatically gets a 0.
+
+It is possible to earn 1 point of extra credit for this assignment. In order
+to earn the extra credit point you need to add a removePerson() method to
+personmgr and also implement remove for the hashtable. If you do so, I will
+use a different main program to test your remove functionality. If it works
+correctly with no memory errors and memory leaks then you will earn the 1
+point of extra credit.
+
+The extra credit point will give you 1 extra point on this assignment only. It
+will not allow you to exceed to maximum points for the assignment.
+
+================================================================================
+=================================================== Note: Reading files from C++
+
+This section is just FYI. You don't need to read this. It is only if you are
+interested in how to avoid having hard-coded char* arrays when reading string
+data in C++ from stdin or a file.
+
+First, in modern production C++ we nearly always use std::string instead of
+char* so this is not so much an issue anymore. Occasionally you will need to
+use char* so it's good to see how to do it.
+
+There are many ways to do this, what I'm showing you here is my approach.
+
+The basic problem is this:
+
+char str[100];
+cin >> str;
+
+What happens if the user enters more than 99 characters? Well, if that happens
+then the str array overflows. This is very common in older C/C++ programs. It
+is called a buffer overflow and is the source of countless hacks in legacy
+software. 
+
+The solution is to never read directly into an array. Instead you can have a
+dynamically allocated char array and fill it in one character at a time. When
+you reach the maximum size for that array, make a new, larger array and copy
+the items into that new array. The following code shows the basic idea (note
+that I have not tried to compile or run this, it is the concept that is
+important).
+
+char* str;
+char ch;
+int curSize = 0;
+int maxSize = 100;
+
+// make a first guess
+str = new char[maxSize];
+cin >> ch;  // This is just ONE character
+while (ch != '/n' && !cin.fail() && !cin.eof()) {
+  str[curSize] = ch;
+  curSize++;
+  if (curSize == maxSize)
+  {
+    // need to make a bigger string
+    maxSize = maxSize * 2;
+    char* newstr[maxSize];
+    strncpy(newstr,str,curSize);
+    delete [] str;
+    str = newstr;
+  }
+  cin >> ch;
+}
+str[curSize] = 0;
+  
+This is just one way to safely read character data into a char[] in C++. Other
+ways may be more efficient or error tolerant but this has long been a tricky
+part of C/C++ code. 
+
+
+

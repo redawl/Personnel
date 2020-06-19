@@ -1,0 +1,48 @@
+======= Loading personnel data =======
+Added 248 persons to the person manager.
+
+======= Exercising lookups ===========
+Showing the first 10 records.
+
+ID: MC007X90U
+First Name: Aaden
+Last Name: Correa
+
+ID: MC00TF3K4
+First Name: Jessica
+Last Name: Bromley
+
+ID: MC00QALHT
+First Name: Natasha
+Last Name: Jessup
+
+ID: MC00RVP99
+First Name: Amber
+Last Name: Spaulding
+
+ID: MC00L2NQZ
+First Name: Jesus
+Last Name: Lumpkin
+
+ID: MC007H1DU
+First Name: Mckayla
+Last Name: Lombardi
+
+ID: MC00XTQZJ
+First Name: Briley
+Last Name: Lumpkin
+
+ID: MC00N0KR6
+First Name: Draven
+Last Name: Soriano
+
+ID: MC006NWAJ
+First Name: Brandon
+Last Name: Bundy
+
+ID: MC00KDJ3T
+First Name: Aiden
+Last Name: Hamel
+
+======= Hashtable stats ===========
+Table uses 244 out of 9973 entries.
